@@ -6,7 +6,6 @@ variable "gitlab_url" {
 variable "gitlab_token" {
   type        = string
   description = "GitLab Server Tocken"
-  default     = "glpat-_zANNckKK6vYU732kNHh"
   sensitive   = true
 }
 variable "gitlab_group_name" {
