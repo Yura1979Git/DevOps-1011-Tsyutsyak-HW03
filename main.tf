@@ -8,7 +8,9 @@ resource "gitlab_group" "gitlab_wa_hw03_group" {
 
 # Add a project to the group - example/example
 resource "gitlab_project" "gitlab_wa_hw03_project" {
-  name         = var.gitlab_project_name
+  name         = "wa-${var.gitlab_project_name}-project"
+  path         = "wa-${var.gitlab_project_name}-project"
+  description = "An wa-${var.gitlab_project_name}-project test"
   namespace_id = gitlab_group.gitlab_wa_hw03_group.id
 
   depends_on = [
